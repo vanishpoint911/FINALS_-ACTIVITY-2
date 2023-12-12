@@ -1,0 +1,186 @@
+
+*{
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'inconsolata';
+  src: url(Inconsolata-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+  font-family: 'Jua';
+  src: url('Jua-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'koulen';
+  src: url(Koulen-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'inika';
+  src: url(Inika-Regular.ttf);
+}
+
+
+button{
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+  margin: none;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  margin: 0px;
+  background-image: linear-gradient(180deg, rgba(43,65,139,1) 0%, rgba(91,58,112,1) 100%);;
+}
+
+nav{
+  height: 120px;
+  background-image: linear-gradient(90deg, rgba(113,13,149,1) 0%, rgba(16,30,91,1) 50%, rgba(50,63,16,1) 100%);;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: center; 
+}
+
+nav > button{
+  font-family: 'Jua';
+  font-size: 64px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+nav > button > span{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+nav > button > span::after{
+  content: attr(data-name);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0;
+  -webkit-background-clip: text;
+  overflow: hidden;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  white-space: nowrap;
+  height: 100%;
+  transition: width ease .5s;
+}
+
+
+
+nav > button:hover > span::after{
+  width: 100%;
+}
+
+#cardPage{
+  width: 600px;
+  height: 750px;
+  background-image: linear-gradient(165deg, rgba(134,154,223,1) 0%, rgba(248,150,150,1) 100%); 
+  margin-top: 40px; 
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 40px;
+  display: flex;
+  overflow: hidden;
+}
+
+#cardCarousel{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform ease .5s;
+}
+
+.cardSection{
+  flex-shrink: 0;
+  height: 100%;  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeaders{
+  font-size: 96px;
+  font-weight: normal;
+  margin: 0px;
+  align-self: center;
+  font-family: 'koulen';
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(165deg, rgba(0,21,53,1) 0%, rgba(137,10,117,1) 100%);;
+}
+
+#myFace{
+  width: 200px;
+  height: 200px;
+  align-self: center;
+  margin-left: 67px;
+}
+
+.aboutMeContainer{
+  display: flex;
+  
+}
+
+.logoContainer{
+  margin-left: 97px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.myName{
+  font-size: 48px;
+  font-family: 'inika';
+  align-self: center;
+  margin-top: 29px;
+  margin-bottom: 0px;
+}
+
+.textContainer{
+  margin-top: 50px;
+  width: 500px;
+  height: 180px;
+  border-radius: 24px;
+  border: 5px solid black;
+  align-self: center;
+  padding-top: 20px;
+  padding-left: 19px;
+  padding-right: 19px;
+  font-size: 24px;
+  font-family: 'inconsolata';
+}
+
+.achievementsContainer{
+  margin: 0px;
+  height: 510px;
+  width: 540px;
+  font-size: 36px;
+}
+
+.achievementsContainer ul li{
+  margin-top: 30px;
+}
+
+.aspirationContainer{
+ width: 540px;
+ height: 300px; 
+ font-size: 36px;
+}
+
+.aspirationContainer ul li:nth-of-type(2){
+
+  margin-top: 30px;
+}
